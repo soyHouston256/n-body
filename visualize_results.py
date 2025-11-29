@@ -82,24 +82,24 @@ def generate_performance_chart():
     cpus = [1, 2, 4, 8, 16, 32]
     gflops = [9.56, 10.53, 19.95, 38.47, 67.66, 111.26]
     
-    plt.style.use('dark_background')
-    fig, ax = plt.subplots(figsize=(10, 6))
+    # plt.style.use('dark_background') # Removed for white background
+    fig, ax = plt.subplots(figsize=(10, 6)) # Default is white
     
-    bars = ax.bar(range(len(cpus)), gflops, color='#00ff00', alpha=0.7)
+    bars = ax.bar(range(len(cpus)), gflops, color='#00cc00', alpha=0.7) # Slightly darker green for visibility
     
     # Add value labels
     for bar in bars:
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height,
                 f'{height:.1f}',
-                ha='center', va='bottom', color='white', fontweight='bold')
+                ha='center', va='bottom', color='black', fontweight='bold')
 
     ax.set_xticks(range(len(cpus)))
     ax.set_xticklabels([str(c) for c in cpus])
     
-    ax.set_xlabel('CPUs (OpenMP Threads)', fontsize=12, color='white')
-    ax.set_ylabel('Performance (GFlops)', fontsize=12, color='white')
-    ax.set_title('N-Body Simulation Scaling on Khipu (32 Cores)', fontsize=14, color='white', fontweight='bold')
+    ax.set_xlabel('CPUs (OpenMP Threads)', fontsize=12, color='black')
+    ax.set_ylabel('Performance (GFlops)', fontsize=12, color='black')
+    ax.set_title('N-Body Simulation Scaling on Khipu (32 Cores)', fontsize=14, color='black', fontweight='bold')
     
     # Add a trend line (ideal scaling based on 1 CPU)
     # ideal = [gflops[0] * c for c in cpus]
