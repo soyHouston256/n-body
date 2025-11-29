@@ -1,8 +1,10 @@
 # N-Body Simulation - CPU-Only Version
-# Simplified Makefile without CUDA/GPU dependencies
+# Optimized for Khipu HPC (AVX/OpenMP)
 
 CXX = mpicxx
-CXXFLAGS = -O3 -Wall
+# -march=native optimizes for the machine we build on. 
+# If login node != compute node, use -march=skylake-avx512 or similar.
+CXXFLAGS = -O3 -Wall -fopenmp -march=native -ffast-math
 
 # Detect OS and set OpenMP flags accordingly
 UNAME_S := $(shell uname -s)
@@ -20,7 +22,7 @@ endif
 # Default target: build all CPU versions
 all: cpu-4th cpu-6th cpu-8th
 
-# Individual targets
+# CPU Targets
 cpu-4th: phi-GPU.cpp hermite4.h vector3.h taylor.h
 	$(CXX) $(CXXFLAGS) -DFOURTH -o $@ phi-GPU.cpp $(LDFLAGS)
 
