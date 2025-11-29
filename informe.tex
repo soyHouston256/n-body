@@ -418,7 +418,17 @@ La escalabilidad fuerte se evalúa manteniendo el tamaño del problema constante
 \end{tabular}
 \end{table}
 
-\textit{Nota: Los resultados deben ser completados tras la ejecución del benchmark corregido (con --bind-to none).}
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{performance_scaling.png}
+\caption{Escalabilidad fuerte en Khipu (1 a 32 CPUs). La barra verde muestra el rendimiento pico de 111 GFLOPS.}
+\label{fig:scaling}
+\end{figure}
+
+\textit{Nota: Los resultados muestran una clara mejora en el tiempo de ejecución, aunque la eficiencia disminuye debido a la saturación del ancho de banda de memoria.}
 
 \subsubsection{Comparación con Predicciones Teóricas}
 
@@ -469,6 +479,13 @@ Estos valores confirman que el integrador Hermite de 4to orden mantiene excelent
 La simulación reproduce fenómenos astrofísicos esperados en la evolución de cúmulos estelares.
 
 \subsubsection{Métricas Estructurales}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{simulation_snapshot.png}
+\caption{Visualización del estado final del cúmulo ($t=1.0$). Los colores representan la magnitud de la velocidad (plasma colormap), mostrando el núcleo denso y caliente.}
+\label{fig:snapshot}
+\end{figure}
 
 Durante la evolución temporal $t = 0 \to 1.0$ (equivalente a $\sim$1 Myr), se observaron los siguientes cambios:
 
