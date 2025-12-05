@@ -4,7 +4,7 @@
 CXX = mpicxx
 # -march=native optimizes for the machine we build on. 
 # If login node != compute node, use -march=skylake-avx512 or similar.
-CXXFLAGS = -O3 -Wall -fopenmp -march=native -ffast-math
+CXXFLAGS = -O3 -Wall -march=native -ffast-math
 
 # Detect OS and set OpenMP flags accordingly
 UNAME_S := $(shell uname -s)

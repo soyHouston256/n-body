@@ -1,0 +1,44 @@
+[
+  {
+    "cpu_time": 178.0,
+    "energy_error": 0,
+    "timesteps": 240.0,
+    "processes": 1,
+    "wall_time": 0.5095031261444092,
+    "config": "benchmarks/config_strong.cfg",
+    "label": "Strong_P1",
+    "success": true,
+    "particles": 5120,
+    "speedup": 1.0,
+    "efficiency": 100.0,
+    "gflops": 247.1090785109632
+  },
+  {
+    "cpu_time": 178.0,
+    "energy_error": 0,
+    "timesteps": 240.0,
+    "processes": 2,
+    "wall_time": 0.6135950088500977,
+    "config": "benchmarks/config_strong.cfg",
+    "label": "Strong_P2",
+    "success": true,
+    "particles": 5120,
+    "speedup": 0.8303573510143751,
+    "efficiency": 41.517867550718755,
+    "gflops": 205.18883984396666
+  },
+  {
+    "cpu_time": 178.0,
+    "energy_error": 0,
+    "timesteps": 240.0,
+    "processes": 4,
+    "wall_time": 0.6832709312438965,
+    "config": "benchmarks/config_strong.cfg",
+    "label": "Strong_P4",
+    "success": true,
+    "particles": 5120,
+    "speedup": 0.7456824267598469,
+    "efficiency": 18.642060668996173,
+    "gflops": 184.26489733844457
+  }
+]
