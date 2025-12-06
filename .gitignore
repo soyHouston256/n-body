@@ -1,0 +1,12 @@
+docs/
+*.o
+*.out
+*.dat
+*.log
+__pycache__/
+autom4te.cache/
+config.log
+config.status
+cpu-4th
+gen-plum
+.DS_Store

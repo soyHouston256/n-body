@@ -20,6 +20,17 @@ echo "Starting M15 simulation (N=25600) on $(hostname)"
 echo "CPUs available: $SLURM_CPUS_PER_TASK"
 
 # Run with 1 MPI process (hybrid MPI+OpenMP)
-cd .. && mpirun -n 1 --bind-to none ./cpu-4th slurm_scripts/phi-M15.cfg
+# Assuming sbatch was run from slurm_scripts/
+cd .. 
+
+echo "Current directory: $(pwd)"
+if [ ! -f "./cpu-4th" ]; then
+    echo "❌ ERROR: Executable ./cpu-4th NOT found!"
+    echo "Contents of $(pwd):"
+    ls -l
+    exit 1
+fi
+
+mpirun -n 1 --bind-to none ./cpu-4th slurm_scripts/phi-M15.cfg
 
 echo "Simulation complete"

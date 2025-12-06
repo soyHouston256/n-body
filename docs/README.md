@@ -140,3 +140,16 @@ mpirun -n 2 ./cpu-4th < phi-GPU4.cfg
 - El archivo `phi-GPU.cpp` contiene código tanto CPU como GPU, pero cuando se compila sin `-DGPU`, solo se usa el código CPU
 - Las versiones CPU usan precisión doble, mientras que las GPU usan precisión simple con acumulación float2
 - Los timesteps adaptativos son clave para el rendimiento: partículas cercanas tienen pasos pequeños, partículas lejanas tienen pasos grandes
+
+
+#comando usado 
+rsync -avz max.ramirez@khipu.utec.edu.pe:~/n-body/outputs/ /Users/maxhoustonramirezmartel/code/utec/hpc/N-Body-CPU/outputs/
+
+
+#ignoramos git porque es algo que no queremos correr 
+rsync -avz --exclude='.git' --exclude='.DS_Store' /Users/maxhoustonramirezmartel/code/utec/hpc/N-Body-CPU/ max.ramirez@khipu.utec.edu.pe:/home/max.ramirez/n-body/
+
+
+
+rsync -avz max.ramirez@khipu.utec.edu.pe:~/n-body/outputs/ /Users/maxhoustonramirezmartel/code/utec/hpc/N-Body-CPU/outputs/
+

@@ -369,7 +369,7 @@ class NBenchmark:
         
         # 1. Escalabilidad fuerte
         # 1. Escalabilidad fuerte con múltiples tamaños de problema
-        particle_counts = [1024, 2048, 4096]
+        particle_counts = [1024, 2048, 10000]
         
         for n in particle_counts:
             print(f"\n🚀 Ejecutando Strong Scaling para N={n}")

@@ -1,10 +1,10 @@
 [
   {
-    "cpu_time": 125.0,
+    "cpu_time": 94.0,
     "energy_error": 0,
-    "timesteps": 62.0,
+    "timesteps": 78.0,
     "processes": 1,
-    "wall_time": 0.32930517196655273,
+    "wall_time": 0.22277402877807617,
     "config": "benchmarks/config_weak_1.cfg",
     "label": "Weak_P1_N1024",
     "success": true,
@@ -12,36 +12,36 @@
     "particles_per_process": 1024,
     "speedup": 1.0,
     "efficiency": 100.0,
-    "gflops": 3.959984934984412
+    "gflops": 7.364282492885693
   },
   {
-    "cpu_time": 141.0,
+    "cpu_time": 108.0,
     "energy_error": 0,
-    "timesteps": 111.0,
+    "timesteps": 151.0,
     "processes": 2,
-    "wall_time": 0.36710309982299805,
+    "wall_time": 0.38086891174316406,
     "config": "benchmarks/config_weak_2.cfg",
     "label": "Weak_P2_N2048",
     "success": true,
     "particles": 2048,
     "particles_per_process": 1024,
-    "speedup": 0.8970372958586569,
-    "efficiency": 44.851864792932844,
-    "gflops": 25.401568563425716
+    "speedup": 0.5849099832235771,
+    "efficiency": 29.245499161178856,
+    "gflops": 33.30634916339475
   },
   {
-    "cpu_time": 242.0,
+    "cpu_time": 193.0,
     "energy_error": 0,
-    "timesteps": 137.0,
+    "timesteps": 173.0,
     "processes": 4,
-    "wall_time": 0.6045279502868652,
+    "wall_time": 0.6224560737609863,
     "config": "benchmarks/config_weak_4.cfg",
     "label": "Weak_P4_N4096",
     "success": true,
     "particles": 4096,
     "particles_per_process": 1024,
-    "speedup": 0.5447310944188575,
-    "efficiency": 13.618277360471437,
-    "gflops": 76.09778991719108
+    "speedup": 0.3578951803490924,
+    "efficiency": 8.94737950872731,
+    "gflops": 93.32655955784973
   }
 ]
