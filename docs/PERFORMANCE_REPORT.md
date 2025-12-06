@@ -67,3 +67,19 @@ Para **N=5120** (usado en benchmarks locales):
     - (c) Software de Análisis: Implementado en `benchmarks/`.
 
 Recomendamos ejecutar estas mismas pruebas en **Khipu** con $N \ge 25600$ para obtener curvas de escalabilidad positivas para el informe final.
+
+---
+<br>
+
+### 🏫 Información Académica
+
+**Universidad de Ingeniería y Tecnología - UTEC**  
+*Maestría en Ciencia de Datos e Inteligencia Artificial*
+
+**Curso:** Applied High Performance Computing  
+**Profesor:** Jose Antonio Fiestas Iquira  
+
+**👥 Integrantes:**
+- Morocho Caballero, Rodolfo
+- Ramirez Martel, Max Houston
+- Velasquez Santos, Alberto Valentin

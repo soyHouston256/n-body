@@ -7,7 +7,7 @@
 - [Compañero 2] - [Código 2]
 
 **Curso:** Applied High Performance Computing  
-**Profesor:** José Fiestas  
+**Profesor:** Jose Antonio Fiestas Iquira  
 **Fecha:** Noviembre 2024
 
 ---
@@ -460,3 +460,18 @@ Todo el código y datos están disponibles en: [GitHub Repository URL]
 
 *Informe Final - Proyecto HPC 2024*  
 *Universidad [Nombre] - Posgrado en Computación*
+---
+<br>
+
+### 🏫 Información Académica
+
+**Universidad de Ingeniería y Tecnología - UTEC**  
+*Maestría en Ciencia de Datos e Inteligencia Artificial*
+
+**Curso:** Applied High Performance Computing  
+**Profesor:** Jose Antonio Fiestas Iquira  
+
+**👥 Integrantes:**
+- Morocho Caballero, Rodolfo
+- Ramirez Martel, Max Houston
+- Velasquez Santos, Alberto Valentin

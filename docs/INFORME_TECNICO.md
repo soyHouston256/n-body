@@ -229,3 +229,18 @@ printf("Tiempo: %.6f s\n", t_end - t_start);
 **Fecha:** Diciembre 2024  
 **Curso:** HPC - Computación de Alto Rendimiento  
 **Universidad:** [Tu Universidad]
+---
+<br>
+
+### 🏫 Información Académica
+
+**Universidad de Ingeniería y Tecnología - UTEC**  
+*Maestría en Ciencia de Datos e Inteligencia Artificial*
+
+**Curso:** Applied High Performance Computing  
+**Profesor:** Jose Antonio Fiestas Iquira  
+
+**👥 Integrantes:**
+- Morocho Caballero, Rodolfo
+- Ramirez Martel, Max Houston
+- Velasquez Santos, Alberto Valentin

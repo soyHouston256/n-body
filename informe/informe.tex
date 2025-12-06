@@ -515,7 +515,29 @@ La escalabilidad fuerte se evalúa manteniendo el tamaño del problema constante
 \label{fig:speedup_comparison}
 \end{figure}
 
-\textit{Nota: Los resultados muestran una clara mejora en el tiempo de ejecución, aunque la eficiencia disminuye debido a la saturación del ancho de banda de memoria.}
+\subsection{Escalabilidad Débil (Khipu)}
+
+Para evaluar el rendimiento bajo carga creciente, se realizó un benchmark de escalabilidad débil donde el tamaño del problema $N$ aumenta proporcionalmente al número de procesadores $P$, manteniendo la carga \textit{teórica} por núcleo constante ($N/P = \text{cte}$, en memoria).
+\[ N(P) = 4096 \times P \]
+Esto implica que para $P=32$, simulamos $N=131,072$ cuerpos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{weak_scaling_gflops.png}
+\includegraphics[width=0.48\textwidth]{weak_scaling_time.png}
+\caption{Resultados de Escalabilidad Débil en Khipu. (Izquierda) GFLOPS sostenidos aumentando hasta 176 GFLOPS. (Derecha) El tiempo de ejecución aumenta linealmente, consistente con la complejidad $O(N^2)$.}
+\label{fig:weak_scaling}
+\end{figure}
+
+\textbf{Análisis:}
+Al contrario que en algoritmos $O(N)$, en el problema N-Body directo ($O(N^2)$), la escalabilidad débil ideal \textbf{no mantiene el tiempo constante}.
+\begin{enumerate}
+    \item \textbf{Carga de trabajo:} Al duplicar $P$ y $N$, el número de interacciones crece por $4\times$ ($(2N)^2$).
+    \item \textbf{Recursos:} La capacidad de cómputo solo crece por $2\times$ ($2P$).
+    \item \textbf{Predicción:} El tiempo por paso debe crecer linealmente con $P$: $T \propto P$.
+\end{enumerate}
+
+La gráfica derecha confirma esta predicción teórica (línea negra punteada), validando que el aumento de tiempo no se debe a un cuello de botella de red, sino a la naturaleza física del algoritmo. Aumentar el tamaño del problema permite alcanzar \textbf{176 GFLOPS} sostenidos en 32 núcleos.
 
 \subsubsection{Comparación con Predicciones Teóricas}
 
@@ -555,6 +577,13 @@ La precisión numérica se evalúa mediante la conservación de energía total d
     \item $E(50) = -2.9458 \times 10^{-1}$
     \item \textbf{Error relativo:} $\Delta E/E \approx 0.34\%$
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{energy_conservation.png}
+\caption{Validación de Conservación de Energía. La gráfica muestra que la energía total (línea roja) permanece prácticamente constante durante toda la evolución ($t=0 \to 50$), con una variación mínima del $0.34\%$, confirmando la estabilidad numérica del integrador Hermite.}
+\label{fig:energy}
+\end{figure}
 
 Aunque el error es mayor que en el caso pequeño ($N=5120$), se mantiene dentro de rangos razonables ($< 1\%$) para una integración rápida con timesteps grandes ($\Delta t \approx 10^{-2}$) y `eps` de $10^{-4}$.
 
@@ -774,7 +803,7 @@ Este trabajo proporciona:
 
 \section*{Agradecimientos}
 
-Agradecemos al profesor José Fiestas por su guía en el curso de Applied High Performance Computing. También agradecemos a los desarrolladores originales del código PhiGPU por proporcionar una base sólida para este proyecto.
+Agradecemos al profesor Jose Antonio Fiestas Iquira por su guía en el curso de Applied High Performance Computing. También agradecemos a los desarrolladores originales del código PhiGPU por proporcionar una base sólida para este proyecto.
 
 \begin{thebibliography}{9}
 
